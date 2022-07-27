@@ -8,5 +8,12 @@ unitTesting:
 	g++ requireUnit.cpp -Wall -o requireUnit 
 	-@echo "--executing program"
 	./requireUnit --success
+main:
+	-@echo "--making main.cpp"
+	g++ main.cpp -Wall -o main 
+	-@echo "--executing program"
+	./main
 clean:
-	rm -f testing vector.o core
+	rm -f testing vector core
+	rm -f unitTesting requireUnit core
+	rm -f main main core
